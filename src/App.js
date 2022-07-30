@@ -29,13 +29,16 @@ function App() {
 
   const getProducts = async () => {
     try {
-      let response = await fetch("http://localhost:3000/api/product", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          // 'Content-Type': 'application/x-www-form-urlencoded',
-        },
-      });
+      let response = await fetch(
+        "https://shop-app-backapi.herokuapp.com/api/product",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+        }
+      );
       let productAll = await response.json();
       if (response.status === 200) {
         setProducts(productAll);
@@ -51,14 +54,17 @@ function App() {
 
   const getTheUserData = async () => {
     try {
-      let response = await fetch("http://localhost:3000/api/user/userdata", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          // 'Content-Type': 'application/x-www-form-urlencoded',
-          "auth-token": cookies.get("jwt"),
-        },
-      });
+      let response = await fetch(
+        "https://shop-app-backapi.herokuapp.com/api/user/userdata",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+            "auth-token": cookies.get("jwt"),
+          },
+        }
+      );
       let userInfo = await response.json();
       if (response.status === 200) {
         setUserData(userInfo);

@@ -51,14 +51,17 @@ function AdminAddProduct(props) {
     data.append("description", description);
 
     try {
-      let res = await fetch("http://localhost:3000/api/product/upload ", {
-        method: "POST",
-        headers: {
-          // 'Content-Type': 'application/x-www-form-urlencoded',
-          "auth-token": cookies.get("jwt"),
-        },
-        body: data,
-      });
+      let res = await fetch(
+        "https://shop-app-backapi.herokuapp.com/api/product/upload ",
+        {
+          method: "POST",
+          headers: {
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+            "auth-token": cookies.get("jwt"),
+          },
+          body: data,
+        }
+      );
       let resUpoad = await res.json();
       if (res.status === 200) {
         console.log(resUpoad);

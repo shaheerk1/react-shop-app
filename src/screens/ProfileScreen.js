@@ -33,14 +33,17 @@ function ProfileScreen(props) {
 
   const getTheUserOrders = async () => {
     try {
-      let response = await fetch("http://localhost:3000/api/order/myorders", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          // 'Content-Type': 'application/x-www-form-urlencoded',
-          "auth-token": cookies.get("jwt"),
-        },
-      });
+      let response = await fetch(
+        "https://shop-app-backapi.herokuapp.com/api/order/myorders",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+            "auth-token": cookies.get("jwt"),
+          },
+        }
+      );
       let orderData = await response.json();
       if (response.status === 200) {
         setMyOrders(orderData);

@@ -65,15 +65,18 @@ function OrderSummery(props) {
     };
 
     try {
-      let res = await fetch("http://localhost:3000/api/order/create", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          // 'Content-Type': 'application/x-www-form-urlencoded',
-          "auth-token": cookies.get("jwt"),
-        },
-        body: JSON.stringify(orderReqData),
-      });
+      let res = await fetch(
+        "https://shop-app-backapi.herokuapp.com/api/order/create",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+            "auth-token": cookies.get("jwt"),
+          },
+          body: JSON.stringify(orderReqData),
+        }
+      );
       let resJson = await res.json();
       if (res.status === 200) {
         // console.log(resJson);

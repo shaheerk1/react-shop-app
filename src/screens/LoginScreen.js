@@ -41,17 +41,20 @@ function LoginScreen(props) {
     e.preventDefault();
 
     try {
-      let res = await fetch("http://localhost:3000/api/user/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          // 'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: JSON.stringify({
-          email: email,
-          password: password,
-        }),
-      });
+      let res = await fetch(
+        "https://shop-app-backapi.herokuapp.com/api/user/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: JSON.stringify({
+            email: email,
+            password: password,
+          }),
+        }
+      );
       let resJwt = await res.text();
       if (res.status === 200) {
         setEmail("");

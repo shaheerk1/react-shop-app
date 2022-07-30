@@ -31,18 +31,21 @@ function RegisterScreen() {
     e.preventDefault();
 
     try {
-      let res = await fetch("http://localhost:3000/api/user/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          // 'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          password: password,
-        }),
-      });
+      let res = await fetch(
+        "https://shop-app-backapi.herokuapp.com/api/user/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            password: password,
+          }),
+        }
+      );
       let resJson = await res.text();
       if (res.status === 200) {
         setName("");
