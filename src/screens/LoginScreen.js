@@ -67,7 +67,7 @@ function LoginScreen(props) {
         cookies.set("jwt", resJwt);
         props.loginState(true);
         props.userDataProp();
-        navigate("/login");
+        navigate("/");
       } else {
         console.log("Some error occured", resJwt);
         showError(resJwt);
