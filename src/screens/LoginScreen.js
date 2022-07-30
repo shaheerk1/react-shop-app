@@ -65,7 +65,7 @@ function LoginScreen(props) {
         setEmail("");
         setPassword("");
         cookies.set("jwt", resJwt);
-        props.loginState(true);
+//         props.loginState(true);
         props.userDataProp();
         navigate("/");
       } else {
