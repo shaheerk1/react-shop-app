@@ -11,7 +11,10 @@ import {
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Cookies from "universal-cookie";
+
+const cookies = new Cookies();
 
 const cookies = new Cookies();
 
@@ -62,6 +65,7 @@ function LoginScreen(props) {
         cookies.set("jwt", resJwt);
         props.loginState(true);
         props.userDataProp();
+        navigate("/login");
       } else {
         console.log("Some error occured", resJwt);
         showError(resJwt);
