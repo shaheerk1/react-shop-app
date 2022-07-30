@@ -16,9 +16,11 @@ import Cookies from "universal-cookie";
 
 const cookies = new Cookies();
 
-const cookies = new Cookies();
-
 function LoginScreen(props) {
+  
+    const navigate = useNavigate();
+
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
