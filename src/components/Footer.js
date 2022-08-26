@@ -7,7 +7,7 @@ function Copyright() {
       {"Copyright © "}
       <a
         style={{ color: "inherit" }}
-        href="https://shahirk48.github.io/dev-portf"
+        href="https://shahirk48.github.io"
         target={"_blank"}
         rel="noreferrer"
       >
