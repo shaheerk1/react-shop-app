@@ -30,7 +30,7 @@ function App() {
   const getProducts = async () => {
     try {
       let response = await fetch(
-        "https://shop-app-backapi.herokuapp.com/api/product",
+        "https://e-commerce-backend-production-f048.up.railway.app/api/product",
         {
           method: "GET",
           headers: {
@@ -56,7 +56,7 @@ function App() {
   const getTheUserData = async () => {
     try {
       let response = await fetch(
-        "https://shop-app-backapi.herokuapp.com/api/user/userdata",
+        "https://e-commerce-backend-production-f048.up.railway.app/api/user/userdata",
         {
           method: "GET",
           headers: {
