@@ -48,7 +48,7 @@ function AdminProductList(props) {
   const deleteProduct = async (productId) => {
     try {
       let response = await fetch(
-        `https://shop-app-backapi.herokuapp.com/api/product/delete/${productId}`,
+        `https://e-commerce-backend-production-f048.up.railway.app/api/product/delete/${productId}`,
         {
           method: "DELETE",
           headers: {
