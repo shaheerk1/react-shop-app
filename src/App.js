@@ -37,7 +37,7 @@ function App() {
             "Content-Type": "application/json",
             // 'Content-Type': 'application/x-www-form-urlencoded',
           },
-          mode: 'no-cors', // no-cors, *cors, same-origin
+          //mode: 'no-cors', // no-cors, *cors, same-origin
         }
       );
       let productAll = await response.json();
