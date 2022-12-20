@@ -52,7 +52,7 @@ function AdminAddProduct(props) {
 
     try {
       let res = await fetch(
-        "https://shop-app-backapi.herokuapp.com/api/product/upload ",
+        "https://e-commerce-backend-production-f048.up.railway.app/api/product/upload ",
         {
           method: "POST",
           headers: {
