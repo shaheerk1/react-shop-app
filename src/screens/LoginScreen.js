@@ -47,7 +47,7 @@ function LoginScreen(props) {
 
     try {
       let res = await fetch(
-        "https://shop-app-backapi.herokuapp.com/api/user/login",
+        "https://e-commerce-backend-production-f048.up.railway.app/api/user/login",
         {
           method: "POST",
           headers: {
