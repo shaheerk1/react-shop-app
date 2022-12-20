@@ -66,7 +66,7 @@ function OrderSummery(props) {
 
     try {
       let res = await fetch(
-        "https://shop-app-backapi.herokuapp.com/api/order/create",
+        "https://e-commerce-backend-production-f048.up.railway.app/api/order/create",
         {
           method: "POST",
           headers: {
