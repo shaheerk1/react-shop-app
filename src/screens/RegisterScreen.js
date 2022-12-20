@@ -32,7 +32,7 @@ function RegisterScreen() {
 
     try {
       let res = await fetch(
-        "https://shop-app-backapi.herokuapp.com/api/user/register",
+        "https://e-commerce-backend-production-f048.up.railway.app/api/user/register",
         {
           method: "POST",
           headers: {
