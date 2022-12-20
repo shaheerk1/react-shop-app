@@ -22,7 +22,7 @@ function AdminOrders() {
   const getTheOrders = async () => {
     try {
       let response = await fetch(
-        "https://shop-app-backapi.herokuapp.com/api/order/allorders",
+        "https://e-commerce-backend-production-f048.up.railway.app/api/order/allorders",
         {
           method: "GET",
           headers: {
