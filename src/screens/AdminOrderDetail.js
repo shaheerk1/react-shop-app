@@ -15,7 +15,7 @@ function AdminOrderDetail() {
     const getOrderById = async () => {
       try {
         let response = await fetch(
-          `https://shop-app-backapi.herokuapp.com/api/order/${id}`,
+          `https://e-commerce-backend-production-f048.up.railway.app/api/order/${id}`,
           {
             method: "GET",
             headers: {
