@@ -77,7 +77,7 @@ function ProductScreen(props) {
     const getProductById = async () => {
       try {
         let response = await fetch(
-          `https://shop-app-backapi.herokuapp.com/api/product/${id}`,
+          `https://e-commerce-backend-production-f048.up.railway.app/api/product/${id}`,
           {
             method: "GET",
             headers: {
