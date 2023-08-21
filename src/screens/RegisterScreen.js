@@ -32,7 +32,7 @@ function RegisterScreen() {
 
     try {
       let res = await fetch(
-        "https://e-commerce-backend-production-f048.up.railway.app/api/user/register",
+        "https://shiftback.azurewebsites.net/api/user/register",
         {
           method: "POST",
           headers: {

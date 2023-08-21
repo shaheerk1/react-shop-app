@@ -34,7 +34,7 @@ function ProfileScreen(props) {
   const getTheUserOrders = async () => {
     try {
       let response = await fetch(
-        "https://e-commerce-backend-production-f048.up.railway.app/api/order/myorders",
+        "https://shiftback.azurewebsites.net/api/order/myorders",
         {
           method: "GET",
           headers: {

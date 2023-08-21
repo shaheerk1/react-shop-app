@@ -30,7 +30,7 @@ function App() {
   const getProducts = async () => {
     try {
       let response = await fetch(
-        "https://e-commerce-backend-production-f048.up.railway.app/api/product",
+        "https://shiftback.azurewebsites.net/api/product",
         {
           method: "GET",
           headers: {
@@ -56,7 +56,7 @@ function App() {
   const getTheUserData = async () => {
     try {
       let response = await fetch(
-        "https://e-commerce-backend-production-f048.up.railway.app/api/user/userdata",
+        "https://shiftback.azurewebsites.net/api/user/userdata",
         {
           method: "GET",
           headers: {

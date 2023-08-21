@@ -52,7 +52,7 @@ function AdminAddProduct(props) {
 
     try {
       let res = await fetch(
-        "https://e-commerce-backend-production-f048.up.railway.app/api/product/upload ",
+        "https://shiftback.azurewebsites.net/api/product/upload ",
         {
           method: "POST",
           headers: {

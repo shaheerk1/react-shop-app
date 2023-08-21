@@ -66,7 +66,7 @@ function OrderSummery(props) {
 
     try {
       let res = await fetch(
-        "https://e-commerce-backend-production-f048.up.railway.app/api/order/create",
+        "https://shiftback.azurewebsites.net/api/order/create",
         {
           method: "POST",
           headers: {

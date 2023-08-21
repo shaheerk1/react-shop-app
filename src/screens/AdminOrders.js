@@ -22,7 +22,7 @@ function AdminOrders() {
   const getTheOrders = async () => {
     try {
       let response = await fetch(
-        "https://e-commerce-backend-production-f048.up.railway.app/api/order/allorders",
+        "https://shiftback.azurewebsites.net/api/order/allorders",
         {
           method: "GET",
           headers: {

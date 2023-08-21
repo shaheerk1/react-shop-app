@@ -15,7 +15,7 @@ function AdminOrderDetail() {
     const getOrderById = async () => {
       try {
         let response = await fetch(
-          `https://e-commerce-backend-production-f048.up.railway.app/api/order/${id}`,
+          `https://shiftback.azurewebsites.net/api/order/${id}`,
           {
             method: "GET",
             headers: {
